@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obscure Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .mask-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px;
+        }
+        .mask {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .mask:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose Your Mask</h1>
+    <div class="mask-container">
+        <div class="mask" style="background-image: url('mask1.png');" onclick="navigateTo('project1.html')"></div>
+        <div class="mask" style="background-image: url('mask2.png');" onclick="navigateTo('project2.html')"></div>
+        <div class="mask" style="background-image: url('mask3.png');" onclick="navigateTo('project3.html')"></div>
+    </div>
+    
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
